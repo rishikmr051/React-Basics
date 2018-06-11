@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './App.css';
+import ResultItem from './ResultItem';
 
 
 interface IState {
@@ -53,7 +54,7 @@ class App extends React.Component<{}, IState> {
 
 
   public render() {
-    const liItems = this.state.users.map((u, index) => (<li key={index}>{u.name}</li>));
+    const liItems = this.state.users.map((u, index) => (<ResultItem title={u.name} key={index} />));
     return (
       <div className="App">
         <input type="text" onChange={this.onQuery}/>
