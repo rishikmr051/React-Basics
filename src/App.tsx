@@ -1,3 +1,4 @@
+import 'bootstrap/dist/bootstrap.min.css';
 import * as React from 'react';
 import './App.css';
 import ResultItem from './ResultItem';
