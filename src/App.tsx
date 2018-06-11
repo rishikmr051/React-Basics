@@ -41,17 +41,26 @@ public state: Readonly<IState> = {
     });
   }
 
+  public onQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  }
+
+
   public render() {
 
 const liItems = this.state.users.map(user => (<li>{user.name}</li>));
 
     return (
       <div className="App">
-        <ul>
-          {liItems}
-        </ul>
+
+      <input type="text" onChange={this.onQuery}/>
+
+      <ul>
+        {liItems}
+      </ul>
+      
+      
       {this.state.title}
-        
       <br /><button onClick={this.onBtnClick}>Click Me</button>
       </div>
     );
